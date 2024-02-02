@@ -8,7 +8,7 @@ export async function POST(request: any) {
     const body = await request.json()
     console.log("body:",body)
     const messages = [
-        { role: 'system', content: 'You are a friendly assistant.Replace *smiling* with 😊' },
+        { role: 'system', content: 'You are a friendly assistant.Replace *smiling* with 😊.Always give complete responses. Never end with incomplete response.'},
         { role: 'user', content: body }
       ];
 

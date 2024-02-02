@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Icons } from "@/components/ui/icon";
 
 
 
@@ -71,12 +72,13 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
   <CardTitle>Llama-2 reply</CardTitle>
     
   </CardHeader>
-  
-  <CardContent >
+
   {
-      isLoading?'Processing your Request...':<p >{users}</p>
+      isLoading?<div className="flex justify-center"><Icons.spinner className="h-12 w-12 animate-spin" /></div>:<div className="bg-slate-900 rounded-sm mx-4 p-3"><CardContent><p >{users}</p></CardContent></div>
     }
-  </CardContent>
+
+  
+  
   <CardFooter >
     
     
